@@ -15,7 +15,7 @@ num_classes = 100
 
 # Network Parameters
 batch_size = 64
-epochs = 2
+epochs = 100
 save_dir = os.path.join(os.getcwd(), 'save_models')
 model_name = 'keras_cifar100_trained_model_LeakyReLU.h5'
 
