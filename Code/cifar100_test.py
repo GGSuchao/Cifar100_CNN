@@ -8,6 +8,7 @@ from keras.models import Sequential
 from keras.models import load_model
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D
+from keras.utils import plot_model
 import keras.backend as K
 import os
 
@@ -29,6 +30,8 @@ y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
 model = load_model('./save_models/keras_cifar100_trained_model.h5')
+
+plot_model(model, to_file = 'model.png', show__shapes = True, show_layer_names = True)
 
 scores = model.evaluate(X_test, y_test, batch_size = batch_size)
 print('Test loss: ', scores[0])
