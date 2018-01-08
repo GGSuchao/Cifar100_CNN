@@ -14,7 +14,7 @@ import os
 num_classes = 100
 
 # Network Parameters
-batch_size = 32
+batch_size = 64
 epochs = 100
 save_dir = os.path.join(os.getcwd(), 'save_models')
 model_name = 'keras_cifar100_trained_model_overfit.h5'
