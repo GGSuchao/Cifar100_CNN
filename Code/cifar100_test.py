@@ -10,6 +10,7 @@ from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras.utils import plot_model
 import keras.backend as K
+import numpy as np
 import os
 
 num_classes = 100
@@ -24,6 +25,11 @@ X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
 X_train /= 255
 X_test /= 255
+
+# mean = np.mean(X_train, axis = (0, 1, 2, 3))
+# std = np.std(X_train, axis = (0, 1, 2, 3))
+# X_train = (X_train - mean) / (std + 1e-7)
+# X_test = (X_test - mean) / (std + 1e-7)
 
 # Convert class vectors to binary class matrices.
 y_train = keras.utils.to_categorical(y_train, num_classes)
