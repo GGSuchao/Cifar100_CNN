@@ -40,3 +40,4 @@ plot_model(model, to_file = 'model.png', show__shapes = True, show_layer_names =
 scores = model.evaluate(X_test, y_test, batch_size = batch_size)
 print('Test loss: ', scores[0])
 print('Test accuracy: ', scores[1])
+
